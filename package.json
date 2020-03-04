@@ -2,7 +2,11 @@
   "name": "@yjl9903/setmap",
   "version": "1.0.3",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "author": "XLor",
   "license": "MIT",
   "publishConfig": {
