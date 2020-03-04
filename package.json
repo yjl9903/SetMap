@@ -4,6 +4,10 @@
   "main": "dist/index.js",
   "author": "XLor",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yjl9903/SetMap.git"
+  },
   "scripts": {
     "start": "node dist/index.js",
     "build": "yarn tsc",
