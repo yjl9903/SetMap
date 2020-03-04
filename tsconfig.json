@@ -16,7 +16,7 @@
       ]
     },
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "dist",
   },
   "include":[
     "./src/**/*"
