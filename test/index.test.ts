@@ -32,7 +32,11 @@ test('SetSet', () => {
   expect(set.has([v3, v2, v1])).toBeTruthy();
   expect(set.has([v3, v1, v2])).toBeTruthy();
 
-  expect([...set]).toStrictEqual([
+  expect(set.size()).toBe(5);
+
+  const allSet = [...set];
+
+  expect(allSet).toStrictEqual([
     [v1, v2],
     [v1, n1],
     [n1],
@@ -63,7 +67,11 @@ test('SetMap', () => {
   expect(set.add([v1, v2, v3, n1, n2], 4)).toBeTruthy();
   expect(set.add([v1, v2, v3], 5)).toBeTruthy();
 
-  expect([...set]).toStrictEqual([
+  expect(set.size()).toBe(5);
+
+  const allSet = [...set];
+
+  expect(allSet).toStrictEqual([
     [[v1, v2], 2],
     [[v1, n1], 1],
     [[n1], 3],

@@ -11,44 +11,82 @@ export class SetMap<T extends object, U> extends BaseSet<T> {
     }
   }
 
-  has(nodes: T[]): boolean {
-    return this.map.has(this.getSet(nodes));
+  /**
+   * check wheter the set exist.
+   *
+   * @param {T[]} set
+   * @returns {boolean}
+   * @memberof SetMap
+   */
+  has(set: T[]): boolean {
+    return this.map.has(this.getSet(set));
   }
 
-  add(nodes: T[], x: U): boolean {
-    const val = this.getSet(nodes);
-    if (this.map.has(val)) {
+  /**
+   * insert a new (set, value) pair into SetMap,
+   * return whether the set exists.
+   *
+   * @param {T[]} set
+   * @param {U} value
+   * @returns {boolean}
+   * @memberof SetMap
+   */
+  add(set: T[], value: U): boolean {
+    const hsh = this.getSet(set);
+    if (this.map.has(hsh)) {
       return false;
     }
-    this.map.set(val, x);
-    this.mem.push(nodes);
+    this.map.set(hsh, value);
+    this.mem.push(set);
     return true;
   }
 
-  set(nodes: T[], x: U) {
-    const val = this.getSet(nodes);
-    this.map.set(val, x);
-    if (!this.map.has(val)) {
-      this.mem.push(nodes);
+  /**
+   * set a new (set, value) pair into SetMap,
+   * insert a new pair when set does not exist.
+   *
+   * @param {T[]} set
+   * @param {U} value
+   * @returns {SetMap<T extends object, U>} this
+   * @memberof SetMap
+   */
+  set(set: T[], value: U): SetMap<T, U> {
+    const hsh = this.getSet(set);
+    this.map.set(hsh, value);
+    if (!this.map.has(hsh)) {
+      this.mem.push(set);
     }
     return this;
   }
 
-  get(nodes: T[]): U {
-    const val = this.getSet(nodes);
-    if (!this.map.has(val)) {
+  /**
+   * get the value of a set.
+   *
+   * @param {T[]} set
+   * @returns {U}
+   * @memberof SetMap
+   */
+  get(set: T[]): U {
+    const hsh = this.getSet(set);
+    if (!this.map.has(hsh)) {
       throw new Error(`SetMap does not have nodes`);
     }
-    return this.map.get(val) as U;
+    return this.map.get(hsh) as U;
   }
 
-  *[Symbol.iterator]() {
+  *[Symbol.iterator](): Generator<[T[], U]> {
     for (const nodes of this.mem) {
       yield [nodes, this.get(nodes)];
     }
   }
 
-  size() {
+  /**
+   * get the size of this SetMap.
+   *
+   * @returns {number}
+   * @memberof SetMap
+   */
+  size(): number {
     return this.mem.length;
   }
 }

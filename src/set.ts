@@ -6,30 +6,53 @@ export class SetSet<T extends object> extends BaseSet<T> {
 
   constructor(...args: T[][]) {
     super();
-    for (const nodes of args) {
-      this.add(nodes);
+    for (const set of args) {
+      this.add(set);
     }
   }
 
-  has(nodes: T[]): boolean {
-    return this.set.has(this.getSet(nodes));
+  /**
+   * check wheter the set exist.
+   *
+   * @param {T[]} set
+   * @returns {boolean}
+   * @memberof SetSet
+   */
+  has(set: T[]): boolean {
+    return this.set.has(this.getSet(set));
   }
 
-  add(nodes: T[]): boolean {
-    const val = this.getSet(nodes);
+  /**
+   * insert a new set into SetSet,
+   * return whether the set exists.
+   *
+   * @param {T[]} set
+   * @returns {boolean}
+   * @memberof SetSet
+   */
+  add(set: T[]): boolean {
+    const val = this.getSet(set);
     if (this.set.has(val)) {
       return false;
     }
     this.set.add(val);
-    this.mem.push(nodes);
+    this.mem.push(set);
     return true;
   }
 
-  *[Symbol.iterator]() {
-    yield* this.mem;
+  *[Symbol.iterator](): Generator<T[]> {
+    for (const set of this.mem) {
+      yield set;
+    }
   }
 
-  size() {
+  /**
+   * get the size of this SetSet.
+   *
+   * @returns {number}
+   * @memberof SetSet
+   */
+  size(): number {
     return this.mem.length;
   }
 }
