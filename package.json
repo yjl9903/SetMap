@@ -27,6 +27,7 @@
   ],
   "scripts": {
     "build": "unbuild",
+    "coverage": "vitest run --coverage",
     "format": "prettier --parser=typescript --write src/**/*.ts test/**/*.ts",
     "test": "vitest"
   },
@@ -45,6 +46,7 @@
     "random-js": "^2.1.0"
   },
   "devDependencies": {
+    "c8": "^7.11.0",
     "husky": "^4.2.3",
     "lint-staged": "^12.3.7",
     "pnpm": "^6.32.3",
