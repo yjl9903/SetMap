@@ -1,13 +1,15 @@
 # SetMap
 
-![Node.js CI](https://github.com/yjl9903/SetMap/workflows/Node.js%20CI/badge.svg)
+[![version](https://img.shields.io/npm/v/@yjl9903/setmap?color=rgb%2850%2C203%2C86%29&label=SetMap)](https://www.npmjs.com/package/@yjl9903/setmap) ![Node.js CI](https://github.com/yjl9903/SetMap/workflows/Node.js%20CI/badge.svg)
 
 Use Hash to check whether two sets are equal.
 
 ## Install
 
 ```bash
-yarn add @yjl9903/setmap
+npm i @yjl9903/setmap
+# or
+pnpm i @yjl9903/setmap
 ```
 
 ## Usage
@@ -37,4 +39,4 @@ set.has([b, c]); // false
 
 ## License
 
-[MIT](https://github.com/yjl9903/XLex/blob/master/LICENSE)
+[MIT](https://github.com/yjl9903/SetMap/blob/master/LICENSE)
