@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   husky: ^4.2.3
   lint-staged: ^12.3.7
+  pnpm: ^6.32.3
   prettier: ^2.6.0
   random-js: ^2.1.0
   typescript: ^4.6.2
@@ -14,6 +15,7 @@ dependencies:
 devDependencies:
   husky: 4.3.8
   lint-staged: 12.3.7
+  pnpm: 6.32.3
   prettier: 2.6.0
   typescript: 4.6.2
   vitest: 0.7.4
@@ -865,6 +867,12 @@ packages:
     resolution: {integrity: sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==}
     dependencies:
       semver-compare: 1.0.0
+    dev: true
+
+  /pnpm/6.32.3:
+    resolution: {integrity: sha512-lMQgROSwiUA+kt+suAPinjNwqevS1Iz0rppWNZ3jHhzeP07RFRQ+Ksai2OlAnM+YjlbHT9niQ4ICBVSqcdQ04w==}
+    engines: {node: '>=12.17'}
+    hasBin: true
     dev: true
 
   /postcss/8.4.12:
