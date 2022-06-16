@@ -5,7 +5,7 @@ specifiers:
   husky: 4.3.8
   lint-staged: 12.5.0
   pnpm: 7.2.1
-  prettier: 2.7.0
+  prettier: 2.7.1
   random-js: ^2.1.0
   typescript: 4.7.3
   unbuild: 0.7.4
@@ -19,7 +19,7 @@ devDependencies:
   husky: 4.3.8
   lint-staged: 12.5.0
   pnpm: 7.2.1
-  prettier: 2.7.0
+  prettier: 2.7.1
   typescript: 4.7.3
   unbuild: 0.7.4
   vitest: 0.15.1_c8@7.11.3
@@ -1825,8 +1825,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier/2.7.0:
-    resolution: {integrity: sha512-nwoX4GMFgxoPC6diHvSwmK/4yU8FFH3V8XWtLQrbj4IBsK2pkYhG4kf/ljF/haaZ/aii+wNJqISrCDPgxGWDVQ==}
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
