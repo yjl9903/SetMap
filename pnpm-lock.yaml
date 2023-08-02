@@ -2203,8 +2203,8 @@ packages:
       convert-source-map: 1.8.0
     dev: true
 
-  /vite/2.9.12:
-    resolution: {integrity: sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==}
+  /vite/2.9.16:
+    resolution: {integrity: sha512-X+6q8KPyeuBvTQV8AVSnKDvXoBMnTx8zxh54sOwmmuOdxkjMmEJXH2UEchA+vTMps1xw9vL64uwJOWryULg7nA==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -2255,7 +2255,7 @@ packages:
       local-pkg: 0.4.1
       tinypool: 0.2.1
       tinyspy: 0.3.3
-      vite: 2.9.12
+      vite: 2.9.16
     transitivePeerDependencies:
       - less
       - sass
